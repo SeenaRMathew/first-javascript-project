@@ -5,11 +5,46 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Accessing Elements</title>
+  <style>
+    p { color: blue; }
+    .fontRed {color: red; }
+    #someItem {color: green;}
+    [align=left] { color: orange ;}
+
+    p.headline {font-size: larger;}
+    div[align=right] {margin-right: 20px;}
+    #mainContainer.highlight{background-color: yellow;}
+  </style>
 </head>
 <body>
   <header>
     <h1>Accessing Elements</h1>
     <p>Various ways to access elements in the page.</p>
   </header>
+  <section>
+    <ul>
+      <li id="basketball">Raptors</li>
+      <li>Maple Leafs</li>
+      <li>Blue Jays</li>
+      <li>Argonauts</li>
+    </ul>
+  </section>
+  <section>
+    <header>
+      <h2>Baltimore</h2>
+    </header>
+  </section>
+  <script>
+    let firstListItem=document.getElementById('basketball');
+    let basketBallTeam=firstListItem.textContent;
+    console.log(`Toronto basketball team is the ${basketBallTeam}`);
+    
+    
+    let qsFirstListItem =document.querySelector('#basketball')
+    console.log(`Toronto basketball team via queryselector is the ${qsFirstListItem.textContent}`);
+
+    let teamsListItem=document.querySelectorAll('li')
+    console.log(`Toronto basketball team is the ${basketBallTeam}`);
+  </script>
 </body>
 </html>
