@@ -11,4 +11,17 @@ button.addEventListener('click', function () {
 
   // Log to the console
   console.log(`Hello, ${input.value}!`);
+
+
+  //Add to list 
+  let nameList=document.querySelector("#names-list");
+
+  let nextName=document.createElement("li");
+  
+  nextName.textContent=input.value;
+
+  if(nameList!=="")
+  {
+    nameList.insertAdjacentElement("beforeend",nextName);
+  }
 });
